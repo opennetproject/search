@@ -1,0 +1,9 @@
+text>(POST)
+part id-1>
+script>part[1]
+get https://opennetproject.github.io/search/content.json
+foreach with (POST) in response[title]
+  part[1] append link i[link] with text i[title]
+  part[1[ append text i[description]
+fi>
+title>SearchOpen - (POST)
